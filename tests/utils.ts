@@ -62,6 +62,10 @@ export function getBrowserEngineMajorVersion(): number | undefined {
   return parseInt(version.split('.')[0])
 }
 
+export function isWindows(): boolean {
+  return new UAParser().getOS().name === 'Windows'
+}
+
 /**
  * Sets new property values to the object and reverts the properties when the action is complete
  */
